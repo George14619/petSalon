@@ -6,17 +6,8 @@ body {
 header {
     background: saddlebrown;
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-}
-
-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav button {
-    margin: 5px;
 }
 
 h2 {
@@ -32,18 +23,23 @@ h2 {
     margin: auto;
 }
 
-footer {
-    background: saddlebrown;
-    color: white;
-    padding: 0;
-    margin: 0;
-    border: solid;
-    height: 120px;
-    width: 1925px;
+.card {
+    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.9);
 }
 
+.card2 {
+    width: 18rem;
+}
 
+.card:hover {
+    transform: scale(1.05);
+}
 
+.btn-warning {
+    margin-right: 5px;
+}
 
-
-
+#petsDisplay .card {
+    margin: 10px;
+}
