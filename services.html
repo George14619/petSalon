@@ -29,6 +29,41 @@
             <li class="list-group-item">Training</li>
         </ul>
     </main>
+    <!-- Payment Section -->
+<section class="container mt-4">
+    <h2>Book a Service & Make Payment</h2>
+
+    <!-- Service Selection -->
+    <div class="mb-3">
+        <label for="serviceSelect" class="form-label">Choose a Service:</label>
+        <select id="serviceSelect" class="form-select" onchange="calculateTotal()">
+            <option value="">-- Select Service --</option>
+            <option value="Grooming">Grooming - $50</option>
+            <option value="Bathing">Bathing - $30</option>
+            <option value="Nail Trimming">Nail Trimming - $20</option>
+            <option value="Vet Check">Vet Check - $70</option>
+            <option value="Vaccination">Vaccination - $60</option>
+            <option value="Training">Training - $100</option>
+        </select>
+    </div>
+
+    <!-- Payment Method -->
+    <div class="mb-3">
+        <label for="paymentMethod" class="form-label">Select Payment Method:</label>
+        <select id="paymentMethod" class="form-select">
+            <option value="card">Credit/Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash on Arrival</option>
+        </select>
+    </div>
+
+    <!-- Total Price -->
+    <p><strong>Total Cost:</strong> $<span id="totalCost">0</span></p>
+
+    <!-- Checkout Button -->
+    <button id="checkoutBtn" class="btn btn-success">Proceed to Payment</button>
+</section>
+
     <!-- Carousel Section -->
     <div id="carouselExampleAutoplaying" class="carousel slide mt-4 mx-auto" data-bs-ride="carousel" style="max-width: 600px;">
         <div class="carousel-inner">
@@ -96,8 +131,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts/scripts3.js"></script>
+    <script src="./scripts/services.js"></script>
 </body>
 </html>
