@@ -8,6 +8,30 @@ $(document).ready(function () {
         "Vaccination": 60,
         "Training": 100
     };
+    document.addEventListener("DOMContentLoaded", function () {
+        function calculateTotal() {
+            const serviceSelect = document.getElementById("serviceSelect");
+            const totalCost = document.getElementById("totalCost");
+    
+            let price = 0;
+            switch (serviceSelect.value) {
+                case "Grooming": price = 50; break;
+                case "Bathing": price = 30; break;
+                case "Nail Trimming": price = 20; break;
+                case "Vet Check": price = 70; break;
+                case "Vaccination": price = 60; break;
+                case "Training": price = 100; break;
+            }
+            totalCost.textContent = price;
+        }
+    
+        document.getElementById("serviceSelect").addEventListener("change", calculateTotal);
+    
+        document.getElementById("checkoutBtn").addEventListener("click", function () {
+            alert("Proceeding to payment...");
+            // Implement payment logic here
+        });
+    });
 
     // Function to calculate the total price
     $("#serviceSelect").change(function () {
